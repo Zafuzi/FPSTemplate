@@ -1,16 +1,27 @@
-# GodotAutoPublishToItch
-A template for new godot projects that will auto publish to itch
+# FPSTemplate - A godot template with auto-publish to itch using github actions
+![Game Screenshot](images/readme_screenshot_001.png?raw=true)
 
+## Publishing Setup
 
-You need an api key from itch stored in this repos settings as BUTLER_CREDENTIALS
-AND
-A personal access token from github store as GH_CREDENTIALS
+- Create a new game on itch and name it something good. The URL is important here.
+![Itch New Project Page](images/readme_screenshot_005.png?raw=true)
 
-Change .github/workflows/publish-to-itchio.yaml to use your games name instead of GAME_NAME-<PLATFORM>
+- Go to your itch settings and generate a new API Key
+![Itch Settings Page](images/readme_screenshot_002.png?raw=true)
 
+- Then add the API key to Github naming it `BUTLER_CREDENTIALS`
+![Github Secrets](images/readme_screenshot_003.png?raw=true)
+![Github Secrets Page 2](images/readme_screenshot_004.png?raw=true)
 
-Make sure you make a production branch
+- Then generate a personal token for github on the [Personal Tokens](https://github.com/settings/tokens) page.
+- Add that token as a secret in your reposistory as `GH_CREDENTIALS` just like we did for `BUTLER_CREDENTIALS`
 
-Make a pull request into production to start the actions
+-Change `.github/workflows/publish-to-itchio.yaml` to use your games name instead of GAME_NAME-<PLATFORM>, and change the username to your own itch username
+![YAML](images/readme_screenshot_006.png?raw=true)
+- Do the above step for EVERY platform in that file (Search and replace all helps)
+- Create a new branch named `production`
 
-![Game Screenshot](./Images/readme_screenshot_001.png "In Game Test Scene")
+![Creating Production Branch](images/readme_screenshot_007.png?raw=true)
+- Github actions should automatically start building and attempting to publish
+
+![Github Actions](images/readme_screenshot_008.png?raw=true)
