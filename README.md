@@ -16,7 +16,7 @@
 - Then generate a personal token for github on the [Personal Tokens](https://github.com/settings/tokens) page.
 - Add that token as a secret in your reposistory as `GH_CREDENTIALS` just like we did for `BUTLER_CREDENTIALS`
 
--Change `.github/workflows/publish-to-itchio.yaml` to use your games name instead of GAME_NAME-<PLATFORM>, and change the username to your own itch username
+-Change `.github/workflows/publish-to-itchio.yaml` to use your games name instead of FPSTemplate-<PLATFORM>, and change the username to your own itch username
 ![YAML](images/readme_screenshot_006.png?raw=true)
 - Do the above step for EVERY platform in that file (Search and replace all helps)
 - Create a new branch named `production`

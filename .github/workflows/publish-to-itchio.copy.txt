@@ -10,7 +10,7 @@ jobs:
         id: download-windows
         uses: dsaltares/fetch-gh-release-asset@master
         with:
-          file: FPSTemplate-Windows.zip
+          file: GAME_NAME-Windows.zip
         env:
           GITHUB_TOKEN: "${{ secrets.GH_CREDENTIALS }}"
       - name: deploy to itch.io (Windows)
@@ -18,9 +18,9 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
           CHANNEL: windows
-          ITCH_GAME: FPSTemplate
+          ITCH_GAME: GAME_NAME
           ITCH_USER: zafuzi
-          PACKAGE: FPSTemplate-Windows.zip
+          PACKAGE: GAME_NAME-Windows.zip
           VERSION: ${{ steps.download-windows.outputs.version }}
 
   release_macos:
@@ -30,7 +30,7 @@ jobs:
         id: download-macos
         uses: dsaltares/fetch-gh-release-asset@master
         with:
-          file: FPSTemplate-MacOS.zip
+          file: GAME_NAME-MacOS.zip
         env:
           GITHUB_TOKEN: "${{ secrets.GH_CREDENTIALS }}"
       - name: deploy to itch.io (MacOS)
@@ -38,9 +38,9 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
           CHANNEL: mac
-          ITCH_GAME: FPSTemplate
+          ITCH_GAME: GAME_NAME
           ITCH_USER: zafuzi
-          PACKAGE: FPSTemplate-MacOS.zip
+          PACKAGE: GAME_NAME-MacOS.zip
           VERSION: ${{ steps.download-windows.outputs.version }}
 
   release_linux:
@@ -50,7 +50,7 @@ jobs:
         id: download-linux
         uses: dsaltares/fetch-gh-release-asset@master
         with:
-          file: FPSTemplate-Linux.zip
+          file: GAME_NAME-Linux.zip
         env:
           GITHUB_TOKEN: "${{ secrets.GH_CREDENTIALS }}"
       - name: deploy to itch.io (Linux)
@@ -58,9 +58,9 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
           CHANNEL: linux
-          ITCH_GAME: FPSTemplate
+          ITCH_GAME: GAME_NAME
           ITCH_USER: zafuzi
-          PACKAGE: FPSTemplate-Linux.zip
+          PACKAGE: GAME_NAME-Linux.zip
           VERSION: ${{ steps.download-windows.outputs.version }}
           
   release_html:
@@ -70,7 +70,7 @@ jobs:
         id: download-html
         uses: dsaltares/fetch-gh-release-asset@master
         with:
-          file: FPSTemplate-HTML5.zip
+          file: GAME_NAME-HTML5.zip
         env:
           GITHUB_TOKEN: "${{ secrets.GH_CREDENTIALS }}"
       - name: deploy to itch.io (HTML5)
@@ -78,7 +78,7 @@ jobs:
         env:
           BUTLER_CREDENTIALS: ${{ secrets.BUTLER_CREDENTIALS }}
           CHANNEL: html
-          ITCH_GAME: FPSTemplate
+          ITCH_GAME: GAME_NAME
           ITCH_USER: zafuzi
-          PACKAGE: FPSTemplate-HTML5.zip
+          PACKAGE: GAME_NAME-HTML5.zip
           VERSION: ${{ steps.download-windows.outputs.version }}
