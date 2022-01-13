@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://scripts/warp.gd" type="Script" id=1]
+
+[node name="warp" type="Spatial"]
+script = ExtResource( 1 )
+__meta__ = {
+"_editor_description_": "don't forget to assign the player and the target node!"
+}
+
+[node name="timer" type="Timer" parent="."]
+wait_time = 0.5
+one_shot = true
+[connection signal="timeout" from="timer" to="." method="_move_player"]

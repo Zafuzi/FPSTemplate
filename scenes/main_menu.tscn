@@ -1,0 +1,85 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://nodes/label.tscn" type="PackedScene" id=1]
+[ext_resource path="res://fonts/cutive_mono_72.tres" type="DynamicFont" id=2]
+[ext_resource path="res://nodes/button.tscn" type="PackedScene" id=3]
+[ext_resource path="res://main_theme.tres" type="Theme" id=4]
+[ext_resource path="res://scripts/play_button.gd" type="Script" id=5]
+[ext_resource path="res://scripts/quit_button.gd" type="Script" id=6]
+[ext_resource path="res://scenes/main_menu.gd" type="Script" id=7]
+
+[node name="main_menu" type="CanvasLayer"]
+script = ExtResource( 7 )
+
+[node name="ColorRect" type="ColorRect" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0313726, 0.0352941, 0.0470588, 0.960784 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Control" type="Control" parent="."]
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="title" parent="Control" instance=ExtResource( 1 )]
+anchor_right = 1.0
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 0.0
+margin_bottom = 150.0
+custom_fonts/font = ExtResource( 2 )
+text = "GAME TITLE"
+valign = 1
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Control"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -190.5
+margin_top = -62.0
+margin_right = 190.5
+margin_bottom = 62.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="play_button" parent="Control/VBoxContainer" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 0.0
+margin_right = 381.0
+margin_bottom = 54.0
+text = "play"
+script = ExtResource( 5 )
+
+[node name="quit_button" parent="Control/VBoxContainer" instance=ExtResource( 3 )]
+margin_left = 0.0
+margin_top = 58.0
+margin_right = 381.0
+margin_bottom = 112.0
+text = "quit"
+script = ExtResource( 6 )
+
+[node name="timer" type="Timer" parent="Control/VBoxContainer/quit_button"]
+wait_time = 0.5
+one_shot = true
+
+[node name="credit" parent="Control" instance=ExtResource( 1 )]
+anchor_left = 1.0
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = -590.0
+margin_top = -60.0
+margin_right = 0.0
+margin_bottom = 0.0
+text = "Company Name, Year"
+[connection signal="pressed" from="Control/VBoxContainer/play_button" to="Control/VBoxContainer/play_button" method="_play_game"]
+[connection signal="pressed" from="Control/VBoxContainer/quit_button" to="Control/VBoxContainer/quit_button" method="_quit_pressed"]
+[connection signal="timeout" from="Control/VBoxContainer/quit_button/timer" to="Control/VBoxContainer/quit_button" method="_quit_game"]

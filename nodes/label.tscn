@@ -1,0 +1,27 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://fonts/cutive_mono_48.tres" type="DynamicFont" id=1]
+
+[sub_resource type="StyleBoxFlat" id=1]
+content_margin_left = 8.0
+content_margin_right = 8.0
+content_margin_top = 8.0
+content_margin_bottom = 8.0
+bg_color = Color( 0.0862745, 0.101961, 0.14902, 0.784314 )
+corner_radius_top_left = 10
+corner_radius_top_right = 10
+corner_radius_bottom_right = 10
+corner_radius_bottom_left = 10
+
+[node name="label" type="Label"]
+margin_left = 790.0
+margin_top = 258.0
+margin_right = 1127.0
+margin_bottom = 324.0
+custom_styles/normal = SubResource( 1 )
+custom_fonts/font = ExtResource( 1 )
+text = "sample text"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
