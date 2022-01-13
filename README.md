@@ -25,3 +25,5 @@
 - Github actions should automatically start building and attempting to publish
 
 ![Github Actions](images/readme_screenshot_008.png?raw=true)
+
+- Just push to production or use a pull request to retrigger the actions and auto-publish
