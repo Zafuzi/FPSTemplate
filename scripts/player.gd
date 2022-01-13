@@ -17,7 +17,6 @@ var velocity = Vector3.ZERO
 
 func _ready():
 	pivot = $pivot
-	Input.set_mouse_mode(Input.MOUSE_MODE_CAPTURED)
 
 func _physics_process(delta):
 	dir = Vector3.ZERO

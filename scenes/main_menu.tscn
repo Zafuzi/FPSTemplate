@@ -76,10 +76,11 @@ anchor_top = 1.0
 anchor_right = 1.0
 anchor_bottom = 1.0
 margin_left = -590.0
-margin_top = -60.0
+margin_top = -70.0
 margin_right = 0.0
 margin_bottom = 0.0
 text = "Company Name, Year"
+
 [connection signal="pressed" from="Control/VBoxContainer/play_button" to="Control/VBoxContainer/play_button" method="_play_game"]
 [connection signal="pressed" from="Control/VBoxContainer/quit_button" to="Control/VBoxContainer/quit_button" method="_quit_pressed"]
 [connection signal="timeout" from="Control/VBoxContainer/quit_button/timer" to="Control/VBoxContainer/quit_button" method="_quit_game"]
