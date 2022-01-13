@@ -13,4 +13,4 @@ Make sure you make a production branch
 
 Make a pull request into production to start the actions
 
-![Game Screenshot]("Images/readme_screenshot_001.png")
+![Game Screenshot](./Images/readme_screenshot_001.png "In Game Test Scene")
