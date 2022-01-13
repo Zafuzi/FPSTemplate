@@ -1,6 +1,8 @@
 # FPSTemplate - A godot template with auto-publish to itch using github actions
 ![Game Screenshot](images/readme_screenshot_001.png?raw=true)
 
+Adapted from: [Ainlind - first_person_exploration_template](https://github.com/Ainlid/first_person_exploration_template)
+
 ## Publishing Setup
 
 - Create a new game on itch and name it something good. The URL is important here.
