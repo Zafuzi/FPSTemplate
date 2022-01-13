@@ -19,6 +19,10 @@
 -Change `.github/workflows/publish-to-itchio.yaml` to use your games name instead of FPSTemplate-<PLATFORM>, and change the username to your own itch username
 ![YAML](images/readme_screenshot_006.png?raw=true)
 - Do the above step for EVERY platform in that file (Search and replace all helps)
+- Change godot build directory output names to your games name
+
+![Godot Export Settings](images/readme_screenshot_009.png?raw=true)
+
 - Create a new branch named `production`
 
 ![Creating Production Branch](images/readme_screenshot_007.png?raw=true)
