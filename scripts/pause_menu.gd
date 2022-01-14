@@ -25,9 +25,10 @@ func _unpause_game():
 	menu.hide()
 
 func _reload():
+	yield(self, fader._reload_scene())
 	_unpause_game()
-	fader._reload_scene()
 
 func _main_menu():
-	_unpause_game()
+	menu.hide()
 	fader._fade_start("main_menu")
+

@@ -21,4 +21,5 @@ __meta__ = {
 [node name="timer" type="Timer" parent="."]
 wait_time = 0.5
 one_shot = true
+
 [connection signal="timeout" from="timer" to="." method="_change_scene"]
