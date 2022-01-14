@@ -6,9 +6,7 @@
 [sub_resource type="CapsuleShape" id=1]
 radius = 0.5
 
-[node name="player" type="KinematicBody" groups=[
-"player",
-]]
+[node name="player" type="KinematicBody" groups=["player"]]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1, 0 )
 script = ExtResource( 1 )
 
